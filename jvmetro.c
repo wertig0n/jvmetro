@@ -286,7 +286,7 @@ main ( int argc, char **argv )
 	fprintf( stderr, "JVMetro" " v" VERSION "\n"
 			 "Copyright (C) 2007 Jonathan Moore Liles.\n" );
 
-	client = jack_client_new( "jvmetro" );
+	client = jack_client_open("jvmetro", JackNoStartServer, NULL);
 
 	if ( !client )
 	{
